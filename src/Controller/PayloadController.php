@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use App\DTO\ChangePassword;
 use App\DTO\User;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -16,5 +17,11 @@ class PayloadController extends AbstractController
     public function payloadAction(#[MapRequestPayload] User $user): JsonResponse
     {
         return new JsonResponse($user->getEmail());
+    }
+
+    #[Route(path: 'api/change-password', name: 'change-password', methods: ['POST'])]
+    public function changePasswordAction(#[MapRequestPayload] ChangePassword $changePassword): JsonResponse
+    {
+        return new JsonResponse($changePassword->getEmail());
     }
 }
