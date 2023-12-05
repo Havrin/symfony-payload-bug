@@ -13,13 +13,13 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class PayloadController extends AbstractController
 {
-    #[Route(path: 'api/payload', name: 'payload', methods: ['POST'])]
+    #[Route(path: 'api/payload', name: 'payload', methods: ['POST'], format: 'json')]
     public function payloadAction(#[MapRequestPayload] User $user): JsonResponse
     {
         return new JsonResponse($user->getEmail());
     }
 
-    #[Route(path: 'api/change-password', name: 'change-password', methods: ['POST'])]
+    #[Route(path: 'api/change-password', name: 'change-password', methods: ['POST'], format: 'json')]
     public function changePasswordAction(#[MapRequestPayload] ChangePassword $changePassword): JsonResponse
     {
         return new JsonResponse($changePassword->getEmail());

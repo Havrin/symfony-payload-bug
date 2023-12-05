@@ -11,16 +11,16 @@
         "ext-iconv": "*",
         "phpdocumentor/reflection-docblock": "^5.3",
         "phpstan/phpdoc-parser": "^1.22",
-        "symfony/console": "6.3.*",
-        "symfony/dotenv": "6.3.*",
+        "symfony/console": "*",
+        "symfony/dotenv": "*",
         "symfony/flex": "^2",
-        "symfony/framework-bundle": "6.3.*",
-        "symfony/property-access": "6.3.*",
-        "symfony/property-info": "6.3.*",
-        "symfony/runtime": "6.3.*",
-        "symfony/serializer": "6.3.*",
-        "symfony/validator": "6.3.*",
-        "symfony/yaml": "6.3.*"
+        "symfony/framework-bundle": "*",
+        "symfony/property-access": "*",
+        "symfony/property-info": "*",
+        "symfony/runtime": "*",
+        "symfony/serializer": "*",
+        "symfony/validator": "*",
+        "symfony/yaml": "*"
     },
     "config": {
         "allow-plugins": {
@@ -67,7 +67,7 @@
     "extra": {
         "symfony": {
             "allow-contrib": false,
-            "require": "6.3.*",
+            "require": "6.4.*",
             "docker": true
         }
     }
